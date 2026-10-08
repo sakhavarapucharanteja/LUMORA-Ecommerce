@@ -1,0 +1,431 @@
+.admin-order-details-page {
+  min-height: 100vh;
+  background: #f8f5f2;
+  padding-bottom: 70px;
+}
+
+.admin-order-details-container {
+  width: min(1180px, 92%);
+  margin: 0 auto;
+  padding-top: 35px;
+}
+
+/* Back */
+
+.admin-order-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: none;
+  background: transparent;
+  color: #6f625d;
+  font-size: 14px;
+  cursor: pointer;
+  padding: 0;
+  margin-bottom: 25px;
+}
+
+.admin-order-back:hover {
+  color: #a45d66;
+}
+
+/* Header */
+
+.admin-order-details-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.admin-small-label {
+  color: #a45d66;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  margin-bottom: 5px;
+}
+
+.admin-order-details-header h1 {
+  margin: 0;
+  font-family: "Playfair Display", Georgia, serif;
+  color: #3f302b;
+  font-size: 38px;
+}
+
+.admin-order-details-header p {
+  margin: 7px 0 0;
+  color: #806f68;
+  font-size: 14px;
+}
+
+.admin-large-status {
+  padding: 10px 17px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.status-placed {
+  background: #fff4dc;
+  color: #9a6b12;
+}
+
+.status-confirmed {
+  background: #e9f3ff;
+  color: #3571a8;
+}
+
+.status-shipped {
+  background: #f0eaff;
+  color: #7251a6;
+}
+
+.status-delivered {
+  background: #e8f7ed;
+  color: #34784a;
+}
+
+.status-cancelled {
+  background: #fdeaea;
+  color: #b54b4b;
+}
+
+/* Error */
+
+.admin-order-error {
+  padding: 13px 16px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  background: #fdeaea;
+  color: #a33d3d;
+  font-size: 14px;
+}
+
+/* Grid */
+
+.admin-order-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+/* Cards */
+
+.admin-order-card,
+.admin-products-card {
+  background: #ffffff;
+  border: 1px solid #ebe3de;
+  border-radius: 14px;
+  padding: 23px;
+  box-shadow: 0 8px 30px rgba(63, 48, 43, 0.04);
+}
+
+.admin-card-title {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: #3f302b;
+  font-size: 15px;
+  font-weight: 700;
+  padding-bottom: 17px;
+  margin-bottom: 5px;
+  border-bottom: 1px solid #eee7e3;
+}
+
+.admin-card-title svg {
+  color: #a45d66;
+}
+
+/* Info */
+
+.admin-info-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 12px 0;
+  border-bottom: 1px solid #f2ece8;
+}
+
+.admin-info-row:last-child {
+  border-bottom: none;
+}
+
+.admin-info-row span {
+  color: #95847d;
+  font-size: 13px;
+}
+
+.admin-info-row strong {
+  color: #3f302b;
+  font-size: 13px;
+  text-align: right;
+  word-break: break-word;
+}
+
+.admin-total {
+  color: #a45d66 !important;
+  font-size: 16px !important;
+}
+
+/* Address */
+
+.admin-address {
+  padding-top: 13px;
+  color: #55443e;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+/* Status */
+
+.status-card {
+  grid-column: span 2;
+}
+
+.admin-status-update {
+  display: flex;
+  gap: 12px;
+  margin-top: 17px;
+}
+
+.admin-status-update select {
+  flex: 1;
+  height: 45px;
+  border: 1px solid #ded5d0;
+  border-radius: 9px;
+  background: #fff;
+  padding: 0 13px;
+  color: #3f302b;
+  font-size: 14px;
+  outline: none;
+}
+
+.admin-status-update select:focus {
+  border-color: #a45d66;
+}
+
+.admin-status-update button {
+  height: 45px;
+  padding: 0 18px;
+  border: none;
+  border-radius: 9px;
+  background: #3f302b;
+  color: white;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.admin-status-update button:hover:not(:disabled) {
+  background: #5a4540;
+}
+
+.admin-status-update button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.admin-status-flow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 11px;
+  margin-top: 22px;
+  color: #b09e96;
+  font-size: 12px;
+}
+
+.admin-status-flow span.active {
+  color: #a45d66;
+  font-weight: 700;
+}
+
+.admin-spin {
+  animation: adminSpin 1s linear infinite;
+}
+
+@keyframes adminSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Products */
+
+.admin-products-card {
+  margin-top: 18px;
+}
+
+.admin-products-list {
+  margin-top: 8px;
+}
+
+.admin-product-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 17px 0;
+  border-bottom: 1px solid #eee7e3;
+}
+
+.admin-product-image {
+  width: 72px;
+  height: 72px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  background: #f6f1ee;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #a8958c;
+}
+
+.admin-product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.admin-product-info {
+  flex: 1;
+}
+
+.admin-product-info h3 {
+  margin: 0;
+  color: #3f302b;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.admin-product-info p {
+  margin: 6px 0 0;
+  color: #95847d;
+  font-size: 13px;
+}
+
+.admin-product-subtotal {
+  color: #3f302b;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.admin-products-total {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 35px;
+  padding-top: 20px;
+  color: #806f68;
+  font-size: 14px;
+}
+
+.admin-products-total strong {
+  color: #3f302b;
+  font-size: 20px;
+}
+
+/* Loading */
+
+.admin-order-loading {
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #806f68;
+}
+
+.admin-loading-icon {
+  margin-bottom: 10px;
+  animation: adminSpin 1s linear infinite;
+}
+
+/* Not Found */
+
+.admin-order-not-found {
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #806f68;
+  text-align: center;
+}
+
+.admin-order-not-found h2 {
+  margin: 15px 0 5px;
+  color: #3f302b;
+  font-family: "Playfair Display", Georgia, serif;
+}
+
+.admin-order-not-found p {
+  margin: 0 0 20px;
+  font-size: 14px;
+}
+
+.admin-back-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  background: #3f302b;
+  color: white;
+  padding: 11px 17px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+  .admin-order-details-container {
+    width: 94%;
+    padding-top: 25px;
+  }
+
+  .admin-order-details-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .admin-order-details-header h1 {
+    font-size: 30px;
+  }
+
+  .admin-order-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .status-card {
+    grid-column: span 1;
+  }
+
+  .admin-status-update {
+    flex-direction: column;
+  }
+
+  .admin-status-update button {
+    width: 100%;
+  }
+
+  .admin-status-flow {
+    flex-wrap: wrap;
+  }
+
+  .admin-product-row {
+    align-items: flex-start;
+  }
+
+  .admin-product-subtotal {
+    margin-left: auto;
+  }
+}

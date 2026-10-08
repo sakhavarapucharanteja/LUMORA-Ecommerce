@@ -1,0 +1,54 @@
+/* =========================
+   PRODUCT STOCK
+========================= */
+
+.product-stock {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+
+  margin-top: 10px;
+  margin-bottom: 12px;
+
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.product-stock-dot {
+  width: 7px;
+  height: 7px;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+}
+
+.product-stock-in {
+  color: #4f7f5c;
+}
+
+.product-stock-in .product-stock-dot {
+  background: #5d9b70;
+}
+
+.product-stock-out {
+  color: #b34f58;
+}
+
+.product-stock-out .product-stock-dot {
+  background: #b34f58;
+}
+
+
+/* =========================
+   OUT OF STOCK BUTTON
+========================= */
+
+.add-cart-disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.add-cart-disabled:hover {
+  transform: none;
+}

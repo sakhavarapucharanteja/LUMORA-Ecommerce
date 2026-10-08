@@ -1,0 +1,1703 @@
+/* =========================================================
+   LUMORA NAVBAR
+   ========================================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+/* =========================================================
+   ANNOUNCEMENT
+   ========================================================= */
+
+.announcement {
+  width: 100%;
+  background: #241f1d;
+  color: #ffffff;
+  text-align: center;
+  padding: 9px 20px;
+  font-size: 12px;
+  letter-spacing: 0.4px;
+  line-height: 1.4;
+}
+
+/* =========================================================
+   NAVBAR
+   ========================================================= */
+
+.navbar {
+  width: 100%;
+  height: 76px;
+  background: rgba(255, 253, 251, 0.97);
+  border-bottom: 1px solid #eee7e2;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-container {
+  width: 100%;
+  max-width: 1280px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* =========================================================
+   LOGO
+   ========================================================= */
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+
+  color: #241f1d;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+.logo:hover {
+  color: #a45d66;
+}
+
+/* =========================================================
+   NAV LINKS
+   ========================================================= */
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 34px;
+}
+
+.nav-links a {
+  color: #514a46;
+  font-size: 14px;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: #a45d66;
+}
+
+/* =========================================================
+   NAV ACTIONS
+   ========================================================= */
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+/*
+   IMPORTANT:
+   Scope these styles only to direct buttons.
+   This prevents the account dropdown buttons from
+   inheriting unwanted layout behavior.
+*/
+
+.nav-actions > button,
+.nav-actions > .account-menu-wrapper > button {
+  position: relative;
+
+  width: 24px;
+  height: 24px;
+
+  padding: 0;
+  margin: 0;
+
+  border: none;
+  background: transparent;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #302b28;
+  cursor: pointer;
+
+  flex-shrink: 0;
+}
+
+.nav-actions > button:hover,
+.nav-actions > .account-menu-wrapper > button:hover {
+  color: #a45d66;
+}
+
+.nav-actions svg {
+  display: block;
+}
+
+/* =========================================================
+   CART COUNT
+   ========================================================= */
+
+.nav-actions .cart-icon span {
+  position: absolute;
+
+  right: -9px;
+  top: -9px;
+
+  width: 17px;
+  height: 17px;
+
+  background: #a45d66;
+  color: #ffffff;
+
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 9px;
+  font-weight: 600;
+  line-height: 1;
+}
+
+/* =========================================================
+   ACCOUNT MENU WRAPPER
+   ========================================================= */
+
+.account-menu-wrapper {
+  position: relative;
+  width: 24px;
+  height: 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+}
+
+/* =========================================================
+   ACCOUNT ICON
+   ========================================================= */
+
+.account-icon {
+  width: 24px !important;
+  height: 24px !important;
+
+  padding: 0 !important;
+  margin: 0 !important;
+
+  border: none !important;
+  background: transparent !important;
+
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  color: #302b28 !important;
+}
+
+.account-icon:hover {
+  color: #a45d66 !important;
+}
+
+/* =========================================================
+   ACCOUNT DROPDOWN
+   ========================================================= */
+
+.account-dropdown {
+  position: absolute;
+
+  top: calc(100% + 18px);
+  right: -8px;
+
+  width: 310px;
+
+  padding: 0;
+
+  background: #ffffff;
+
+  border: 1px solid #e8dfd9;
+
+  box-shadow:
+    0 20px 55px rgba(45, 36, 33, 0.14);
+
+  z-index: 99999;
+
+  overflow: hidden;
+
+  animation: accountDropdownIn 0.2s ease;
+}
+
+@keyframes accountDropdownIn {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================================================
+   ACCOUNT DROPDOWN HEADER
+   ========================================================= */
+
+.account-dropdown-title {
+  width: 100%;
+
+  display: flex !important;
+  align-items: center !important;
+
+  gap: 13px;
+
+  padding: 18px 18px;
+
+  border-bottom: 1px solid #eee6e1;
+
+  background: #ffffff;
+
+  text-align: left;
+}
+
+.account-dropdown-avatar {
+  width: 42px;
+  height: 42px;
+
+  min-width: 42px;
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  background: #f5e8e4;
+  color: #a45d66;
+
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.account-dropdown-title > div:last-child {
+  flex: 1;
+
+  min-width: 0;
+
+  display: flex !important;
+  flex-direction: column !important;
+
+  align-items: flex-start !important;
+
+  gap: 3px;
+}
+
+.account-dropdown-title strong {
+  display: block;
+
+  margin: 0;
+
+  color: #241f1d;
+
+  font-family: "Playfair Display", Georgia, serif;
+
+  font-size: 18px;
+  font-weight: 500;
+
+  line-height: 1.25;
+}
+
+.account-dropdown-title > div:last-child > span {
+  display: block !important;
+
+  width: auto !important;
+
+  margin: 0;
+
+  color: #8b817b;
+
+  font-size: 11px;
+
+  line-height: 1.4;
+
+  white-space: normal;
+}
+
+/* =========================================================
+   ACCOUNT DROPDOWN ITEMS
+   ========================================================= */
+
+/*
+   Very important:
+   Explicitly control every child of the item.
+*/
+
+.account-dropdown-item {
+  width: 100% !important;
+  min-height: 70px;
+
+  padding: 13px 16px !important;
+  margin: 0 !important;
+
+  border: none !important;
+  border-bottom: 1px solid #f0e9e5 !important;
+
+  background: #ffffff !important;
+
+  color: #3d3531 !important;
+
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+
+  gap: 13px !important;
+
+  text-align: left !important;
+
+  cursor: pointer;
+
+  font-family: inherit;
+
+  position: relative;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.account-dropdown-item:last-child {
+  border-bottom: none !important;
+}
+
+.account-dropdown-item:hover {
+  background: #faf5f2 !important;
+  color: #a45d66 !important;
+}
+
+/* =========================================================
+   ACCOUNT ITEM ICON
+   ========================================================= */
+
+.account-dropdown-item .account-package-icon {
+  width: 34px !important;
+  height: 34px !important;
+
+  min-width: 34px !important;
+
+  margin: 0 !important;
+
+  border-radius: 50%;
+
+  background: #f7eeeb;
+
+  color: #a45d66;
+
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  font-size: 16px !important;
+  line-height: 1 !important;
+
+  flex-shrink: 0 !important;
+}
+
+/*
+   Wishlist Lucide icon
+*/
+
+.account-dropdown-item > svg {
+  width: 20px !important;
+  height: 20px !important;
+
+  min-width: 34px !important;
+  min-height: 34px !important;
+
+  padding: 8px;
+
+  border-radius: 50%;
+
+  background: #f7eeeb;
+
+  color: #a45d66;
+
+  flex-shrink: 0 !important;
+
+  display: block !important;
+}
+
+/* =========================================================
+   ACCOUNT ITEM TEXT
+   ========================================================= */
+
+/*
+   DO NOT use the previous broad selector:
+   .account-dropdown-item > span:not(...)
+
+   Instead explicitly target the text wrapper.
+*/
+
+.account-dropdown-item > span:not(.account-arrow):not(.account-package-icon) {
+  flex: 1 1 auto !important;
+
+  min-width: 0 !important;
+
+  width: auto !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  display: flex !important;
+
+  flex-direction: column !important;
+
+  align-items: flex-start !important;
+
+  justify-content: center !important;
+
+  gap: 3px !important;
+
+  line-height: normal !important;
+
+  position: static !important;
+}
+
+.account-dropdown-item strong {
+  display: block !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  color: #3d3531 !important;
+
+  font-size: 13px !important;
+
+  font-weight: 600 !important;
+
+  line-height: 1.3 !important;
+}
+
+.account-dropdown-item small {
+  display: block !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  color: #948782 !important;
+
+  font-size: 10px !important;
+
+  font-weight: 400 !important;
+
+  line-height: 1.3 !important;
+}
+
+.account-dropdown-item:hover strong {
+  color: #a45d66 !important;
+}
+
+/* =========================================================
+   ACCOUNT ARROW
+   ========================================================= */
+
+.account-dropdown-item .account-arrow {
+  width: 24px !important;
+  min-width: 24px !important;
+
+  height: 24px !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  display: flex !important;
+
+  align-items: center !important;
+  justify-content: center !important;
+
+  color: #b0a29b !important;
+
+  font-size: 18px !important;
+
+  line-height: 1 !important;
+
+  flex-shrink: 0 !important;
+
+  position: static !important;
+
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.account-dropdown-item:hover .account-arrow {
+  color: #a45d66 !important;
+
+  transform: translateX(3px);
+}
+
+/* =========================================================
+   MOBILE MENU BUTTON
+   ========================================================= */
+
+.mobile-menu-btn {
+  display: none;
+
+  width: 24px;
+  height: 24px;
+
+  padding: 0;
+
+  border: none;
+  background: transparent;
+
+  color: #241f1d;
+
+  cursor: pointer;
+
+  align-items: center;
+  justify-content: center;
+}
+
+/* =========================================================
+   SEARCH OVERLAY
+   ========================================================= */
+
+.search-overlay {
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 99999;
+
+  background: rgba(35, 27, 24, 0.45);
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: flex-start;
+
+  padding: 90px 20px 40px;
+
+  backdrop-filter: blur(5px);
+}
+
+.search-box {
+  width: 100%;
+  max-width: 850px;
+
+  max-height: 80vh;
+
+  background: #ffffff;
+
+  border: 1px solid #eee5df;
+
+  box-shadow:
+    0 25px 70px rgba(45, 33, 30, 0.18);
+
+  overflow: hidden;
+}
+
+/* =========================================================
+   SEARCH HEADER
+   ========================================================= */
+
+.search-header {
+  width: 100%;
+
+  display: flex;
+
+  align-items: center;
+
+  padding: 20px 22px;
+
+  border-bottom: 1px solid #eee5df;
+}
+
+.search-input-wrapper {
+  flex: 1;
+
+  min-width: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  color: #777;
+}
+
+.search-input-wrapper input {
+  width: 100%;
+
+  border: none;
+  outline: none;
+
+  background: transparent;
+
+  font-family: inherit;
+
+  font-size: 17px;
+
+  color: #2d211e;
+}
+
+.search-input-wrapper input::placeholder {
+  color: #aaa;
+}
+
+/* =========================================================
+   SEARCH CLEAR
+   ========================================================= */
+
+.search-clear {
+  width: 28px;
+  height: 28px;
+
+  padding: 4px;
+
+  border: none;
+  background: transparent;
+
+  color: #999;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+}
+
+.search-clear:hover {
+  color: #2d211e;
+}
+
+/* =========================================================
+   SEARCH CLOSE
+   ========================================================= */
+
+.search-close {
+  width: 40px;
+  height: 40px;
+
+  margin-left: 15px;
+
+  padding: 0;
+
+  border: none;
+
+  background: #f7f3f0;
+
+  color: #2d211e;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.search-close:hover {
+  background: #a45d66;
+  color: #ffffff;
+}
+
+/* =========================================================
+   SEARCH CONTENT
+   ========================================================= */
+
+.search-content {
+  max-height: calc(80vh - 81px);
+
+  overflow-y: auto;
+}
+
+/* =========================================================
+   SEARCH EMPTY
+   ========================================================= */
+
+.search-empty {
+  text-align: center;
+
+  padding: 65px 25px;
+}
+
+.search-empty-icon {
+  width: 64px;
+  height: 64px;
+
+  margin: 0 auto 20px;
+
+  border-radius: 50%;
+
+  background: #f5ebe8;
+
+  color: #a45d66;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+}
+
+.search-empty h3 {
+  margin: 0 0 8px;
+
+  font-family: "Playfair Display", Georgia, serif;
+
+  font-size: 26px;
+
+  font-weight: 500;
+
+  color: #2d211e;
+}
+
+.search-empty p {
+  margin: 0;
+
+  color: #777;
+
+  font-size: 14px;
+
+  line-height: 1.6;
+}
+
+/* =========================================================
+   POPULAR SEARCHES
+   ========================================================= */
+
+.popular-searches {
+  margin-top: 30px;
+}
+
+.popular-searches > span {
+  display: block;
+
+  margin-bottom: 12px;
+
+  color: #777;
+
+  font-size: 12px;
+
+  text-transform: uppercase;
+
+  letter-spacing: 1px;
+}
+
+.popular-search-buttons {
+  display: flex;
+
+  justify-content: center;
+
+  flex-wrap: wrap;
+
+  gap: 8px;
+}
+
+.popular-search-buttons button {
+  border: 1px solid #ddd2cc;
+
+  background: #ffffff;
+
+  padding: 9px 15px;
+
+  color: #5e4c47;
+
+  font-family: inherit;
+
+  font-size: 13px;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.popular-search-buttons button:hover {
+  background: #2d211e;
+
+  border-color: #2d211e;
+
+  color: #ffffff;
+}
+
+/* =========================================================
+   SEARCH RESULTS
+   ========================================================= */
+
+.search-results {
+  padding: 25px;
+}
+
+.search-results-header {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  margin-bottom: 15px;
+}
+
+.search-results-header h3 {
+  margin: 0;
+
+  font-family: "Playfair Display", Georgia, serif;
+
+  font-size: 22px;
+
+  font-weight: 500;
+
+  color: #2d211e;
+}
+
+.search-results-header span {
+  color: #888;
+
+  font-size: 13px;
+}
+
+.search-results-list {
+  display: flex;
+
+  flex-direction: column;
+}
+
+.search-product {
+  width: 100%;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 16px;
+
+  padding: 12px;
+
+  border: none;
+
+  border-bottom: 1px solid #eee5df;
+
+  background: #ffffff;
+
+  text-align: left;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.search-product:first-child {
+  border-top: 1px solid #eee5df;
+}
+
+.search-product:hover {
+  background: #faf7f4;
+}
+
+.search-product-image {
+  width: 75px;
+  height: 75px;
+
+  flex-shrink: 0;
+
+  background: #f5f1ed;
+
+  overflow: hidden;
+}
+
+.search-product-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  display: block;
+}
+
+.search-product-info {
+  flex: 1;
+
+  min-width: 0;
+}
+
+.search-product-info > span {
+  display: block;
+
+  margin-bottom: 4px;
+
+  color: #a45d66;
+
+  font-size: 11px;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.7px;
+}
+
+.search-product-info h3 {
+  margin: 0 0 7px;
+
+  color: #2d211e;
+
+  font-family: "Playfair Display", Georgia, serif;
+
+  font-size: 17px;
+
+  font-weight: 500;
+}
+
+.search-product-info strong {
+  color: #2d211e;
+
+  font-size: 14px;
+}
+
+.search-product-arrow {
+  color: #999;
+
+  font-size: 22px;
+
+  padding-right: 5px;
+
+  transition: 0.2s ease;
+}
+
+.search-product:hover .search-product-arrow {
+  color: #a45d66;
+
+  transform: translateX(3px);
+}
+
+/* =========================================================
+   BROWSE BUTTON
+   ========================================================= */
+
+.search-browse-button {
+  margin-top: 25px;
+
+  border: none;
+
+  background: #2d211e;
+
+  color: #ffffff;
+
+  padding: 13px 23px;
+
+  font-family: inherit;
+
+  font-size: 13px;
+
+  cursor: pointer;
+
+  transition: 0.25s ease;
+}
+
+.search-browse-button:hover {
+  background: #a45d66;
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 800px) {
+
+  .nav-container {
+    padding: 0 18px;
+  }
+
+  .mobile-menu-btn {
+    display: flex;
+  }
+
+  .logo {
+    font-size: 16px;
+
+    letter-spacing: 2px;
+  }
+
+  .nav-actions {
+    gap: 13px;
+  }
+
+  .nav-links {
+    display: none;
+
+    position: absolute;
+
+    top: 76px;
+
+    left: 0;
+    right: 0;
+
+    background: #fffdfb;
+
+    border-bottom: 1px solid #eee7e2;
+
+    flex-direction: column;
+
+    align-items: stretch;
+
+    gap: 0;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-links a {
+    padding: 16px 25px;
+
+    border-bottom: 1px solid #eee7e2;
+  }
+
+  /* Account dropdown on mobile */
+
+  .account-dropdown {
+    position: fixed;
+
+    top: 72px;
+
+    right: 16px;
+    left: auto;
+
+    width: min(310px, calc(100vw - 32px));
+
+    max-width: calc(100vw - 32px);
+  }
+
+  .search-overlay {
+    padding: 0;
+
+    align-items: stretch;
+  }
+
+  .search-box {
+    max-width: none;
+
+    min-height: 100vh;
+
+    max-height: 100vh;
+
+    border: none;
+  }
+
+  .search-header {
+    padding: 16px;
+  }
+
+  .search-input-wrapper input {
+    font-size: 16px;
+  }
+
+  .search-content {
+    max-height: calc(100vh - 75px);
+  }
+
+  .search-empty {
+    padding: 70px 20px;
+  }
+
+  .search-results {
+    padding: 20px 15px;
+  }
+
+  .search-product {
+    padding: 10px 5px;
+  }
+
+  .search-product-image {
+    width: 65px;
+    height: 65px;
+  }
+
+  .search-product-info h3 {
+    font-size: 15px;
+  }
+
+  .search-product-arrow {
+    display: none;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 450px) {
+
+  .nav-actions {
+    gap: 10px;
+  }
+
+  .nav-actions svg {
+    width: 19px;
+    height: 19px;
+  }
+
+  .announcement {
+    font-size: 11px;
+  }
+
+  .account-dropdown {
+    right: 10px;
+
+    width: calc(100vw - 20px);
+
+    max-width: calc(100vw - 20px);
+  }
+
+  .account-dropdown-title {
+    padding: 16px;
+  }
+
+  .account-dropdown-item {
+    min-height: 66px;
+
+    padding: 12px 14px !important;
+  }
+}
+
+/* =========================================================
+   LUMORA ACCOUNT MENU
+   COMPLETELY ISOLATED STYLES
+   ========================================================= */
+
+.account-menu-wrapper {
+  position: relative;
+
+  width: 24px;
+  height: 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+}
+
+/* =========================================================
+   ACCOUNT BUTTON
+   ========================================================= */
+
+.account-icon {
+  width: 24px !important;
+  height: 24px !important;
+
+  padding: 0 !important;
+  margin: 0 !important;
+
+  border: 0 !important;
+  outline: 0 !important;
+
+  background: transparent !important;
+
+  color: #302b28 !important;
+
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  cursor: pointer;
+}
+
+.account-icon:hover {
+  color: #a45d66 !important;
+}
+
+/* =========================================================
+   ACCOUNT DROPDOWN
+   ========================================================= */
+
+.account-dropdown {
+  position: absolute !important;
+
+  top: calc(100% + 18px) !important;
+  right: -10px !important;
+
+  width: 310px !important;
+
+  padding: 0 !important;
+  margin: 0 !important;
+
+  background: #ffffff !important;
+
+  border: 1px solid #e8dfd9 !important;
+
+  box-shadow:
+    0 20px 55px rgba(45, 36, 33, 0.15) !important;
+
+  z-index: 999999 !important;
+
+  overflow: hidden !important;
+
+  animation: lumoraAccountOpen 0.2s ease;
+}
+
+@keyframes lumoraAccountOpen {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================================================
+   ACCOUNT HEADER
+   ========================================================= */
+
+.account-header {
+  width: 100% !important;
+
+  min-height: 86px !important;
+
+  padding: 18px !important;
+  margin: 0 !important;
+
+  display: flex !important;
+
+  flex-direction: row !important;
+
+  align-items: center !important;
+
+  gap: 13px !important;
+
+  background: #ffffff !important;
+
+  border: 0 !important;
+  border-bottom: 1px solid #eee6e1 !important;
+}
+
+/* =========================================================
+   ACCOUNT AVATAR
+   ========================================================= */
+
+.account-avatar {
+  width: 42px !important;
+  height: 42px !important;
+
+  min-width: 42px !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  border-radius: 50% !important;
+
+  background: #f5e8e4 !important;
+
+  color: #a45d66 !important;
+
+  display: flex !important;
+
+  align-items: center !important;
+  justify-content: center !important;
+
+  flex-shrink: 0 !important;
+}
+
+/* =========================================================
+   ACCOUNT HEADER TEXT
+   ========================================================= */
+
+.account-header-content {
+  flex: 1 !important;
+
+  width: auto !important;
+  min-width: 0 !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  display: flex !important;
+
+  flex-direction: column !important;
+
+  align-items: flex-start !important;
+
+  justify-content: center !important;
+
+  gap: 4px !important;
+
+  /*
+    Important reset:
+    prevents generic span/div styles
+    from affecting this area.
+  */
+
+  background: transparent !important;
+
+  border: 0 !important;
+
+  position: static !important;
+}
+
+/* Account title */
+
+.account-title {
+  width: auto !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  background: transparent !important;
+
+  border: 0 !important;
+
+  color: #241f1d !important;
+
+  font-family:
+    "Playfair Display",
+    Georgia,
+    serif !important;
+
+  font-size: 18px !important;
+
+  font-weight: 500 !important;
+
+  line-height: 1.25 !important;
+
+  text-align: left !important;
+
+  position: static !important;
+}
+
+/* Account subtitle */
+
+.account-subtitle {
+  width: auto !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  background: transparent !important;
+
+  border: 0 !important;
+
+  color: #8b817b !important;
+
+  font-family: inherit !important;
+
+  font-size: 11px !important;
+
+  font-weight: 400 !important;
+
+  line-height: 1.4 !important;
+
+  text-align: left !important;
+
+  white-space: normal !important;
+
+  position: static !important;
+}
+
+/* =========================================================
+   ACCOUNT MENU ITEM
+   ========================================================= */
+
+.account-menu-item {
+  width: 100% !important;
+
+  min-height: 76px !important;
+
+  margin: 0 !important;
+
+  padding: 13px 16px !important;
+
+  border: 0 !important;
+  border-bottom: 1px solid #f0e9e5 !important;
+
+  outline: 0 !important;
+
+  background: #ffffff !important;
+
+  color: #3d3531 !important;
+
+  display: flex !important;
+
+  flex-direction: row !important;
+
+  align-items: center !important;
+
+  gap: 13px !important;
+
+  text-align: left !important;
+
+  font-family: inherit !important;
+
+  cursor: pointer;
+
+  position: relative !important;
+
+  box-shadow: none !important;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease !important;
+}
+
+.account-menu-item:last-child {
+  border-bottom: 0 !important;
+}
+
+.account-menu-item:hover {
+  background: #faf5f2 !important;
+}
+
+/* =========================================================
+   ITEM ICON
+   ========================================================= */
+
+.account-item-icon {
+  width: 36px !important;
+  height: 36px !important;
+
+  min-width: 36px !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  border-radius: 50% !important;
+
+  background: #f7eeeb !important;
+
+  color: #a45d66 !important;
+
+  display: flex !important;
+
+  align-items: center !important;
+  justify-content: center !important;
+
+  flex-shrink: 0 !important;
+
+  position: static !important;
+}
+
+/* =========================================================
+   ITEM CONTENT
+   ========================================================= */
+
+.account-item-content {
+  flex: 1 1 auto !important;
+
+  width: auto !important;
+
+  min-width: 0 !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  display: flex !important;
+
+  flex-direction: column !important;
+
+  align-items: flex-start !important;
+
+  justify-content: center !important;
+
+  gap: 3px !important;
+
+  background: transparent !important;
+
+  border: 0 !important;
+
+  position: static !important;
+}
+
+/* =========================================================
+   ITEM TITLE
+   ========================================================= */
+
+.account-item-title {
+  width: auto !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  background: transparent !important;
+
+  border: 0 !important;
+
+  color: #3d3531 !important;
+
+  font-family: inherit !important;
+
+  font-size: 13px !important;
+
+  font-weight: 600 !important;
+
+  line-height: 1.3 !important;
+
+  text-align: left !important;
+
+  position: static !important;
+}
+
+.account-menu-item:hover .account-item-title {
+  color: #a45d66 !important;
+}
+
+/* =========================================================
+   ITEM DESCRIPTION
+   ========================================================= */
+
+.account-item-description {
+  width: auto !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  background: transparent !important;
+
+  border: 0 !important;
+
+  color: #948782 !important;
+
+  font-family: inherit !important;
+
+  font-size: 10px !important;
+
+  font-weight: 400 !important;
+
+  line-height: 1.3 !important;
+
+  text-align: left !important;
+
+  position: static !important;
+}
+
+/* =========================================================
+   ITEM ARROW
+   ========================================================= */
+
+.account-item-arrow {
+  width: 30px !important;
+  height: 30px !important;
+
+  min-width: 30px !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  border-radius: 50% !important;
+
+  background: #a45d66 !important;
+
+  color: #ffffff !important;
+
+  display: flex !important;
+
+  align-items: center !important;
+  justify-content: center !important;
+
+  flex-shrink: 0 !important;
+
+  position: static !important;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease !important;
+}
+
+.account-menu-item:hover .account-item-arrow {
+  background: #241f1d !important;
+
+  transform: translateX(3px);
+}
+
+/* =========================================================
+   MOBILE ACCOUNT MENU
+   ========================================================= */
+
+@media (max-width: 800px) {
+
+  .account-dropdown {
+    position: fixed !important;
+
+    top: 72px !important;
+
+    right: 16px !important;
+    left: auto !important;
+
+    width: min(310px, calc(100vw - 32px)) !important;
+
+    max-width: calc(100vw - 32px) !important;
+  }
+}
+
+@media (max-width: 450px) {
+
+  .account-dropdown {
+    right: 10px !important;
+
+    width: calc(100vw - 20px) !important;
+
+    max-width: calc(100vw - 20px) !important;
+  }
+
+  .account-header {
+    min-height: 82px !important;
+
+    padding: 16px !important;
+  }
+
+  .account-menu-item {
+    min-height: 70px !important;
+
+    padding: 12px 14px !important;
+  }
+}
+
+/* =========================================================
+   LUMORA ACCOUNT - AUTH
+   ========================================================= */
+
+.account-logout {
+  border-top: 1px solid #eee6e1 !important;
+  margin-top: 2px;
+}
+
+.account-logout .account-item-icon {
+  color: #a45d66;
+  background: #f7eeee;
+}
+
+.account-logout:hover {
+  background: #fff7f7 !important;
+}
+
+.account-logout:hover .account-item-title {
+  color: #a45d66;
+}
+
+
+/* =========================
+   ADMIN NAV LINK
+========================= */
+
+.admin-nav-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.admin-nav-link svg {
+  flex-shrink: 0;
+}
+
+.admin-nav-link:hover {
+  color: #a45d66;
+}

@@ -1,0 +1,432 @@
+/* =========================================
+   LUMORA ORDER DETAILS
+========================================= */
+
+.order-details-page {
+  min-height: 100vh;
+  background: #fffdfb;
+  color: #241f1d;
+}
+
+.order-details-container {
+  max-width: 1000px;
+  margin: 0 auto;
+
+  padding: 55px 20px 100px;
+}
+
+
+/* =========================================
+   BACK
+========================================= */
+
+.order-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+
+  margin-bottom: 35px;
+
+  color: #756b67;
+
+  font-size: 13px;
+  text-decoration: none;
+
+  transition: 0.2s ease;
+}
+
+.order-back:hover {
+  color: #a45d66;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.order-details-header {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 30px;
+
+  padding-bottom: 35px;
+
+  border-bottom: 1px solid #e8dfd9;
+}
+
+.order-details-header p {
+  margin: 0 0 9px;
+
+  color: #a45d66;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+.order-details-header h1 {
+  margin: 0;
+
+  font-family: "Playfair Display", Georgia, serif;
+
+  font-size: 38px;
+  font-weight: 500;
+}
+
+.order-details-header span {
+  display: block;
+
+  margin-top: 8px;
+
+  color: #81756f;
+
+  font-size: 13px;
+}
+
+.order-status-badge {
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  padding: 10px 15px;
+
+  background: #f4e8e4;
+
+  color: #a45d66;
+
+  font-size: 12px;
+  font-weight: 600;
+}
+
+
+/* =========================================
+   SECTIONS
+========================================= */
+
+.order-details-section {
+  margin-top: 30px;
+
+  padding: 30px;
+
+  background: #ffffff;
+
+  border: 1px solid #e8dfd9;
+}
+
+.order-details-section h2 {
+  margin: 0 0 25px;
+
+  font-family: "Playfair Display", Georgia, serif;
+
+  font-size: 24px;
+  font-weight: 500;
+}
+
+
+/* =========================================
+   SECTION HEADING
+========================================= */
+
+.order-section-heading {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 20px;
+
+  padding-bottom: 18px;
+
+  border-bottom: 1px solid #eee7e3;
+}
+
+.order-section-heading h2 {
+  margin: 0;
+}
+
+.order-section-heading span {
+  color: #8d817b;
+
+  font-size: 12px;
+}
+
+
+/* =========================================
+   PRODUCTS
+========================================= */
+
+.order-details-products {
+  display: flex;
+
+  flex-direction: column;
+}
+
+.order-details-product {
+  display: flex;
+
+  align-items: center;
+
+  gap: 20px;
+
+  padding: 18px 0;
+
+  border-bottom: 1px solid #f0e9e5;
+}
+
+.order-details-product:last-child {
+  border-bottom: none;
+
+  padding-bottom: 0;
+}
+
+.order-details-product img {
+  width: 90px;
+  height: 90px;
+
+  object-fit: cover;
+
+  background: #f5f0ec;
+}
+
+.order-details-product-info {
+  flex: 1;
+}
+
+.order-details-product-info h3 {
+  margin: 0 0 7px;
+
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.order-details-product-info p {
+  margin: 0 0 5px;
+
+  color: #756b67;
+
+  font-size: 12px;
+}
+
+.order-details-product-info span {
+  color: #9a8d86;
+
+  font-size: 12px;
+}
+
+.order-details-product > strong {
+  font-size: 14px;
+}
+
+
+/* =========================================
+   INFO GRID
+========================================= */
+
+.order-info-grid {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 20px;
+}
+
+
+/* =========================================
+   ADDRESS
+========================================= */
+
+.address-details {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 7px;
+
+  color: #756b67;
+
+  font-size: 13px;
+
+  line-height: 1.5;
+}
+
+.address-details strong {
+  color: #241f1d;
+
+  font-size: 14px;
+}
+
+
+/* =========================================
+   PAYMENT
+========================================= */
+
+.payment-details {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  padding: 15px 0;
+
+  border-bottom: 1px solid #f0e9e5;
+}
+
+.payment-details:last-child {
+  border-bottom: none;
+}
+
+.payment-details span {
+  color: #81756f;
+
+  font-size: 13px;
+}
+
+.payment-details strong {
+  color: #241f1d;
+
+  font-size: 13px;
+
+  text-align: right;
+}
+
+.payment-details .order-total {
+  font-size: 18px;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.order-details-footer {
+  display: flex;
+
+  justify-content: center;
+
+  margin-top: 40px;
+}
+
+.order-details-footer a {
+  padding: 14px 28px;
+
+  background: #241f1d;
+
+  color: #ffffff;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  text-decoration: none;
+
+  transition: 0.25s ease;
+}
+
+.order-details-footer a:hover {
+  background: #a45d66;
+}
+
+
+/* =========================================
+   NOT FOUND
+========================================= */
+
+.order-not-found {
+  min-height: 70vh;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+}
+
+.order-not-found svg {
+  color: #a45d66;
+
+  margin-bottom: 15px;
+}
+
+.order-not-found h1 {
+  margin: 0;
+
+  font-family: "Playfair Display", Georgia, serif;
+
+  font-weight: 500;
+}
+
+.order-not-found p {
+  color: #766b66;
+
+  font-size: 14px;
+}
+
+.order-not-found a {
+  padding: 12px 22px;
+
+  background: #241f1d;
+
+  color: white;
+
+  text-decoration: none;
+
+  font-size: 13px;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+  .order-details-container {
+    padding: 40px 16px 70px;
+  }
+
+  .order-details-header {
+    align-items: flex-start;
+
+    flex-direction: column;
+  }
+
+  .order-details-header h1 {
+    font-size: 30px;
+  }
+
+  .order-status-badge {
+    align-self: flex-start;
+  }
+
+  .order-details-section {
+    padding: 22px 18px;
+  }
+
+  .order-info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .order-details-product {
+    align-items: flex-start;
+  }
+
+  .order-details-product img {
+    width: 70px;
+    height: 70px;
+  }
+
+  .order-details-product > strong {
+    font-size: 13px;
+  }
+
+}
