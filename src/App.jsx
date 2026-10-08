@@ -31,7 +31,7 @@ import Account from "./pages/Account";
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/LUMORA-Ecommerce">
       <CartProvider>
         <WishlistProvider>
 
